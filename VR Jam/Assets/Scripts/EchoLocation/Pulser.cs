@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EcholocationController : MonoBehaviour
+public class Pulser : MonoBehaviour
 {
-    [SerializeField] private bool playingAudio;
-
     private PlayAudio playAudio;
     private EchoLocation echoLocation;
 
@@ -15,13 +13,9 @@ public class EcholocationController : MonoBehaviour
         echoLocation = GetComponentInChildren<EchoLocation>();
     }
 
-    void Update()
+    public void Pulse()
     {
-        if (playingAudio)
-        {
-            playAudio.AudioPlayer();
-            echoLocation.CreateVisuals();
-            playingAudio = false;
-        }
+        playAudio.AudioPlayer();
+        echoLocation.CreateVisuals();
     }
 }
