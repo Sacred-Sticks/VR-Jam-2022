@@ -47,7 +47,7 @@ MonoBehaviour:
   lightPrefab: {fileID: 3430137061518664534, guid: 014aab1fceb70dd4e80a8978e0eab48f,
     type: 3}
   lightLayers: 010000000800000001000000
-  red: 177
+  red: 255
   green: 255
-  blue: 0
+  blue: 255
   speed: 1
