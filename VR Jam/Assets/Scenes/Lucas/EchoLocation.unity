@@ -669,9 +669,9 @@ GameObject:
   - component: {fileID: 1406828247}
   - component: {fileID: 1406828246}
   - component: {fileID: 1406828244}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Speaker
-  m_TagString: Untagged
+  m_TagString: Speaker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2821316a95ce14cbb234905df7c569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakerLayer: 6
+  speakerTag: Speaker
   fullCharge: 10
 --- !u!54 &2112166558
 Rigidbody:
@@ -1081,7 +1081,7 @@ PrefabInstance:
     - target: {fileID: 3673548976220399118, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5029027568996036804, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
@@ -1141,7 +1141,7 @@ PrefabInstance:
     - target: {fileID: 6526397671254205137, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7641915812558555353, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
@@ -1181,7 +1181,7 @@ PrefabInstance:
     - target: {fileID: 7641915812558555355, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2ec1168ad3e3a24f9d7ee607d528de0, type: 3}
