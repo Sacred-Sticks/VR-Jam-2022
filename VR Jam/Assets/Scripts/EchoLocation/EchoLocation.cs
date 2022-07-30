@@ -8,6 +8,7 @@ public class EchoLocation : MonoBehaviour
     [Space]
     [SerializeField] private int[] lightLayers;
     [Space]
+    [SerializeField] private float intensity;
     [SerializeField] private float red;
     [SerializeField] private float green;
     [SerializeField] private float blue;
@@ -44,6 +45,7 @@ public class EchoLocation : MonoBehaviour
                 lightComponent = lightObject.GetComponent<Light>();
                 bodyComponent = lightObject.GetComponent<Rigidbody>();
                 lightComponent.color = color;
+                lightComponent.intensity = intensity;
                 bodyComponent.velocity = lightObject.transform.forward * speed;
             }
         }
