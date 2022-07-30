@@ -17,8 +17,16 @@ public class CurrentCharge : MonoBehaviour
     {
         while (true) {
             yield return new WaitForSeconds(1);
-            charge--;
-            if (charge > 0) pulser.Pulse();
+            if (charge > 0)
+            {
+                pulser.Pulse();
+                charge--;
+            }
         }
+    }
+
+    public void SetCharge(int charge)
+    {
+        this.charge = charge;
     }
 }
