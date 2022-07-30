@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4683300474336675309}
   - component: {fileID: 2984747184119380171}
   - component: {fileID: 6630223990796085987}
+  - component: {fileID: 6213941256001278630}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,3 +133,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6213941256001278630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430137061518664534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9fecfaca3b56b2439a60cd311039e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.5

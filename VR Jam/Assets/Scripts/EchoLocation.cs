@@ -29,7 +29,6 @@ public class EchoLocation : MonoBehaviour
         green /= 255;
         blue /= 255;
         color = Color.red * red + Color.blue * blue + Color.green * green;
-        CreateVisuals();
     }
 
     public void CreateVisuals()
