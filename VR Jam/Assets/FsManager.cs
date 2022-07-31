@@ -25,7 +25,7 @@ public class FsManager : MonoBehaviour
     {
         Vector3 v = mc.velocity;
         float m = v.magnitude;
-        Debug.Log(m);
+        //Debug.Log(m);
 
         if (m > 1)
             isWalking = true;
