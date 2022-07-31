@@ -1,5 +1,5 @@
 Goals:
-	Setup Speaker System
+	Setup Speaker System: DONE
 	Setup Stabbing Enemies / Walls
 	Setup Custom Grabbing Poses
 	Create Enemy AI for shooting / stabbing
