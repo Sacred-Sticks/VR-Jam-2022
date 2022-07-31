@@ -14,10 +14,13 @@ public class EchoLocation : MonoBehaviour
     [SerializeField] private float blue;
     [Space]
     [SerializeField] private float speed;
+    [Space]
+    [SerializeField] private float delayUntilDestroyed;
 
     GameObject lightObject;
     Light lightComponent;
     Rigidbody bodyComponent;
+    DestroyAfterDelay destroyComponent;
     Quaternion rotation;
     Color color;
 
@@ -44,9 +47,11 @@ public class EchoLocation : MonoBehaviour
                 lightObject = Instantiate(lightPrefab, transform.position, rotation);
                 lightComponent = lightObject.GetComponent<Light>();
                 bodyComponent = lightObject.GetComponent<Rigidbody>();
+                destroyComponent = lightObject.GetComponent<DestroyAfterDelay>();
                 lightComponent.color = color;
                 lightComponent.intensity = intensity;
                 bodyComponent.velocity = lightObject.transform.forward * speed;
+                destroyComponent.SetDelayTime(delayUntilDestroyed);
             }
         }
     }
