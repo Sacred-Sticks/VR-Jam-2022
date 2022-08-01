@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Speaker
+  - Enemy Eyes
   layers:
   - Default
   - TransparentFX
