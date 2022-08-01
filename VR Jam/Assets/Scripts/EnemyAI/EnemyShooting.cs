@@ -25,13 +25,10 @@ public class EnemyShooting : MonoBehaviour
             CheckForPlayer();
             yield return new WaitForEndOfFrame();
         }
-        Vector3 directionTowardPlayer = playerTransform.position - gunTransform.position;
-        Vector3 enemyLookAtPlayer = new Vector3 (playerTransform.position.x, transform.position.y, playerTransform.position.z);
         while (true)
         {
-            transform.LookAt(enemyLookAtPlayer);
-            gunTransform.LookAt(playerTransform.position);
-            ShootAtPlayer(directionTowardPlayer);
+            LookAtPlayer();
+            ShootAtPlayer();
             yield return new WaitForSeconds(timePerBullet);
         }
     }
@@ -41,14 +38,26 @@ public class EnemyShooting : MonoBehaviour
         playerSpotted = vision.GetPlayerSpotted();
     }
 
-    private void ShootAtPlayer(Vector3 directionTowardPlayer)
+    private void LookAtPlayer()
     {
+        Vector3 lookAtPlayer = new(playerTransform.position.x, transform.position.y, playerTransform.position.z);
+        transform.LookAt(lookAtPlayer);
+        gunTransform.LookAt(playerTransform.position);
+    }
+
+    private void ShootAtPlayer()
+    {
+        Vector3 directionTowardPlayer = playerTransform.position - gunTransform.position;
         if (Physics.Raycast(gunTransform.position, directionTowardPlayer, out RaycastHit hit))
         {
             if (hit.collider.gameObject.transform == playerTransform)
             {
+<<<<<<< Updated upstream
                 playerTransform.parent.gameObject.GetComponent<PlayerHealth>().ModifyHealth(-1);
                 Debug.Log("Dealt Damage");
+=======
+                playerTransform.parent.gameObject.GetComponent<Health>().ModifyHealth(-1);
+>>>>>>> Stashed changes
             }
         }
     }

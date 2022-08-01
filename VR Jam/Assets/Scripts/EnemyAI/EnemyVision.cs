@@ -25,28 +25,27 @@ public class EnemyVision : MonoBehaviour
 
     private bool CheckForPlayer()
     {
-        Debug.Log("Checking For Player");
         lookAt = playerTransform.position - transform.position;
         float angle = Vector3.Angle(transform.forward, lookAt);
         if (angle > maxAngleRange)
         {
-            Debug.Log("Player Not Found1");
             return false;
         }
         if (!FireRaycast(lookAt))
         {
-            Debug.Log("Player Not Found2");
             return false;
         }
-        Debug.Log("Player Found");
         return true;
     }
 
     private bool FireRaycast(Vector3 direction)
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, direction, out hit, sightRange);
-        return hit.collider.gameObject.CompareTag(playerTag);
+        if (Physics.Raycast(transform.position, direction, out hit, sightRange))
+        {
+            return hit.collider.gameObject.CompareTag(playerTag);
+        }
+        return false;
     }
 
     public bool GetPlayerSpotted()

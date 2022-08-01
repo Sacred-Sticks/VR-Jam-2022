@@ -9,6 +9,5 @@ public class PlayerHealth : MonoBehaviour
     public void ModifyHealth(int healthModification)
     {
         currentHealth += healthModification;
-        Debug.Log("Player Health now at " + currentHealth);
     }
 }

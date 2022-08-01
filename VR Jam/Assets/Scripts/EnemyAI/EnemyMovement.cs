@@ -5,10 +5,15 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [Header("Movement Positions")]
     [SerializeField] private Transform[] mainRoute;
     [SerializeField] private Transform[] combatPoints;
-
+    [Space]
+    [Header("Stopping Values")]
     [SerializeField] private float stoppingDistance;
+    [Space]
+    [Header("Is it stationary")]
+    [SerializeField] private bool stationary;
 
     private EnemyVision vision;
     private NavMeshAgent agent;
@@ -25,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerator Start()
     {
         agent.destination = mainRoute[currentRoutePoint].position;
+        yield return new WaitForEndOfFrame();
         while (!playerSpotted)
         {
             if (agent.remainingDistance < stoppingDistance)
@@ -33,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
                 if (currentRoutePoint == mainRoute.Length) currentRoutePoint = 0;
                 agent.destination = mainRoute[currentRoutePoint].position;
             }
+            
             playerSpotted = vision.GetPlayerSpotted();
             yield return new WaitForEndOfFrame();
         }
