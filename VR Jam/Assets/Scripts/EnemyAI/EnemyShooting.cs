@@ -48,16 +48,12 @@ public class EnemyShooting : MonoBehaviour
     private void ShootAtPlayer()
     {
         Vector3 directionTowardPlayer = playerTransform.position - gunTransform.position;
-        if (Physics.Raycast(gunTransform.position, directionTowardPlayer, out RaycastHit hit))
+        if (Physics.Raycast(gunTransform.position, directionTowardPlayer, out RaycastHit hit, float.PositiveInfinity))
         {
             if (hit.collider.gameObject.transform == playerTransform)
             {
-<<<<<<< Updated upstream
                 playerTransform.parent.gameObject.GetComponent<PlayerHealth>().ModifyHealth(-1);
-                Debug.Log("Dealt Damage");
-=======
-                playerTransform.parent.gameObject.GetComponent<Health>().ModifyHealth(-1);
->>>>>>> Stashed changes
+                Debug.Log("Damage Taken");
             }
         }
     }
