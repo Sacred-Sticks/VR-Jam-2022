@@ -47,7 +47,7 @@ public class EnemyShooting : MonoBehaviour
         {
             if (hit.collider.gameObject.transform == playerTransform)
             {
-                playerTransform.parent.gameObject.GetComponent<Health>().ModifyHealth(-1);
+                playerTransform.parent.gameObject.GetComponent<PlayerHealth>().ModifyHealth(-1);
                 Debug.Log("Dealt Damage");
             }
         }
