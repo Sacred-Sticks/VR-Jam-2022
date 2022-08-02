@@ -33,36 +33,54 @@ public class InputSystem : MonoBehaviour
     {
         var actionMap = playerInputs.FindActionMap(controllerActionMap);
 
-        triggerAction = actionMap.FindAction(triggerActionName);
-        gripAction = actionMap.FindAction(gripActionName);
-        primaryAction = actionMap.FindAction(primaryButtonName);
-        secondaryAction = actionMap.FindAction(secondaryButtonName);
-        joystickAction = actionMap.FindAction(joystickName);
-        pauseAction = actionMap.FindAction(pauseButtonName);
+        if (triggerActionName != "")
+        {
+            triggerAction = actionMap.FindAction(triggerActionName);
+            triggerAction.performed += OnTriggerChanged;
+            triggerAction.canceled += OnTriggerChanged;
+            triggerAction.Enable();
+        }
 
-        triggerAction.performed += OnTriggerChanged;
-        triggerAction.canceled += OnTriggerChanged;
-        triggerAction.Enable();
+        if (gripActionName != "")
+        {
+            gripAction = actionMap.FindAction(gripActionName);
+            gripAction.performed += OnGripChanged;
+            gripAction.canceled += OnGripChanged;
+            gripAction.Enable();
+        }
 
-        gripAction.performed += OnGripChanged;
-        gripAction.canceled += OnGripChanged;
-        gripAction.Enable();
+        if (primaryButtonName != "")
+        {
+            primaryAction = actionMap.FindAction(primaryButtonName);
+            if (primaryAction == null) Debug.Log("not found on " + controllerActionMap);
+            primaryAction.performed += OnPrimaryChanged;
+            primaryAction.canceled += OnPrimaryChanged;
+            primaryAction.Enable();
+        }
 
-        primaryAction.performed += OnPrimaryChanged;
-        primaryAction.canceled += OnPrimaryChanged;
-        primaryAction.Enable();
+        if (secondaryButtonName != "")
+        {
+            secondaryAction = actionMap.FindAction(secondaryButtonName);
+            secondaryAction.performed += OnSecondaryChanged;
+            secondaryAction.canceled += OnSecondaryChanged;
+            secondaryAction.Enable();
+        }
 
-        secondaryAction.performed += OnSecondaryChanged;
-        secondaryAction.canceled += OnSecondaryChanged;
-        secondaryAction.Enable();
+        if (joystickName != "")
+        {
+            joystickAction = actionMap.FindAction(joystickName);
+            joystickAction.performed += OnJoystickChanged;
+            joystickAction.canceled += OnJoystickChanged;
+            joystickAction.Enable();
+        }
 
-        joystickAction.performed += OnJoystickChanged;
-        joystickAction.canceled += OnJoystickChanged;
-        joystickAction.Enable();
-
-        pauseAction.performed += OnPauseChanged;
-        pauseAction.canceled += OnPauseChanged;
-        pauseAction.Enable();
+        if (pauseButtonName != "")
+        {
+            pauseAction = actionMap.FindAction(pauseButtonName);
+            pauseAction.performed += OnPauseChanged;
+            pauseAction.canceled += OnPauseChanged;
+            pauseAction.Enable();
+        }
     }
 
     private void OnTriggerChanged(InputAction.CallbackContext context)
