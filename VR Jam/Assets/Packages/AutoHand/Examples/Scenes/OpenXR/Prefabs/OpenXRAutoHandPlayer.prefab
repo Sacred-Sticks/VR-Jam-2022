@@ -6883,6 +6883,7 @@ GameObject:
   - component: {fileID: 3076256275135179711}
   - component: {fileID: 185075803569865485}
   - component: {fileID: 1049661778}
+  - component: {fileID: 8792565458994178935}
   m_Layer: 0
   m_Name: OpenXRAutoHandPlayer
   m_TagString: Untagged
@@ -6997,6 +6998,19 @@ MonoBehaviour:
   providerName: Open XR Loader
   enableMe: {fileID: 185075803569865485}
   disableMe: {fileID: 3076256275135179711}
+--- !u!114 &8792565458994178935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668830299185360541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebd6e5f7a538f341878e8193d8dfc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
 --- !u!1 &7668830299661638210
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,6 +7720,46 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dc6dff3e83cccf4a8c59ed068335274, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4fcc61d0ee5ad6148977727a3159125a, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c3b346606ef3ab34faa5a3a2b574d2ee, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41213217831b90940b57d972b49df767, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: ad45633981f14a744a97627e4a8b76fa, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: f46e22ef1b7397b4e86d6ad03493d998, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 30a2f7be1d66b164ca4b4db0235e5d1b, type: 3}
     - target: {fileID: 3673548976220399118, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
       propertyPath: m_Name
@@ -8612,6 +8666,136 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7668830300715375532}
     m_Modifications:
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5107908359487144770}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1575735658702523898}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5107908359487144770}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1575735658702523898}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetIsGrabbing
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayHapticVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetIsGrabbing
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayHapticVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SnapFingers, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Autohand.Hand, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SnapFingers, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Autohand.Hand, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 165222653978168726, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: hand
@@ -9103,7 +9287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4a12055965e0f4f82623de50b1beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenSnaps: 0.1
+  timeBetweenSnaps: 2
   inputDeadzone: 0.25
 --- !u!114 &7668830299334033921
 MonoBehaviour:
@@ -9242,6 +9426,141 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7668830300715375532}
     m_Modifications:
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnBeforeGrab.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 732460751138675086}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1575735659161826260}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 732460751138675086}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1575735659161826260}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetIsGrabbing
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayHapticVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetIsGrabbing
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayHapticVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SnapFingers, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Autohand.Hand, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SnapFingers, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Autohand.Hand, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 165222653978168726, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: hand
@@ -9743,7 +10062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4a12055965e0f4f82623de50b1beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenSnaps: 0.1
+  timeBetweenSnaps: 2
   inputDeadzone: 0.25
 --- !u!114 &4376267285915405235
 MonoBehaviour:
@@ -10334,6 +10653,46 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dc6dff3e83cccf4a8c59ed068335274, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4fcc61d0ee5ad6148977727a3159125a, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c3b346606ef3ab34faa5a3a2b574d2ee, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41213217831b90940b57d972b49df767, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: ad45633981f14a744a97627e4a8b76fa, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: f46e22ef1b7397b4e86d6ad03493d998, type: 3}
+    - target: {fileID: 1652676165924337511, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
+        type: 3}
+      propertyPath: clip.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 30a2f7be1d66b164ca4b4db0235e5d1b, type: 3}
     - target: {fileID: 3673548976220399118, guid: b2ec1168ad3e3a24f9d7ee607d528de0,
         type: 3}
       propertyPath: m_Name

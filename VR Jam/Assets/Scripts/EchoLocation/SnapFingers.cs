@@ -32,24 +32,25 @@ public class SnapFingers : MonoBehaviour
 
         if (heldInput < inputDeadzone) return;
 
-        badInput = inputs.GetTrigger();
-
-        if (badInput > inputDeadzone) return;
 
         tappedPrevious = tappedInput;
         tappedInput = inputs.GetPrimary();
 
         if (tappedPrevious != 0) return;
         if (tappedInput < inputDeadzone) return;
+
+        badInput = inputs.GetTrigger();
+
+        if (badInput > inputDeadzone) return;
+
         if (isSnapping) return;
         StartCoroutine(Snap());
+        isSnapping = true;
     }
 
     private IEnumerator Snap()
     {
         pulse.Pulse();
-        Debug.Log("Held: " + heldInput);
-        Debug.Log("Tapped: " + tappedInput);
         yield return new WaitForSeconds(timeBetweenSnaps);
         isSnapping = false;
     }
