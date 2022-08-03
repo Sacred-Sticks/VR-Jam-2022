@@ -14,7 +14,8 @@ public class SnapFingers : MonoBehaviour
     private float tappedInput = 0;
     private float tappedPrevious;
     private float badInput = 0;
-    bool isSnapping = false;
+    private bool isGrabbing;
+    private bool isSnapping = false;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class SnapFingers : MonoBehaviour
 
     private void Update()
     {
+        if (isGrabbing) return;
         if (isSnapping) return;
 
         heldInput = inputs.GetGrip();
@@ -50,5 +52,10 @@ public class SnapFingers : MonoBehaviour
         Debug.Log("Tapped: " + tappedInput);
         yield return new WaitForSeconds(timeBetweenSnaps);
         isSnapping = false;
+    }
+
+    public void SetIsGrabbing(bool isGrabbing)
+    {
+        this.isGrabbing = isGrabbing;
     }
 }
