@@ -1,8 +1,8 @@
 Goals:
 	Setup Speaker System: DONE
 	Setup Stabbing Enemies / Walls: DONE
-	Setup Custom Grabbing Poses
-	Add ability for player to snap fingers to create sound: In progress - Lucas
+	Setup Custom Grabbing Poses: Done
+	Add ability for player to snap fingers to create sound: DONE
 	Create Enemy AI for shooting: DONE
 	Create Enemy AI for movement: DONE
 	Create ambient sound sources (water droplets, thunder, machinery)
