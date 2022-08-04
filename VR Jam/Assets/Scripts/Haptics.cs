@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(XRBaseController))]
 public class Haptics : MonoBehaviour
 {
     [SerializeField] private float intensity;

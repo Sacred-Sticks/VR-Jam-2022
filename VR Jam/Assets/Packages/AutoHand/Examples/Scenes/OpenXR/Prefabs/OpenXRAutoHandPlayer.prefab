@@ -8679,32 +8679,32 @@ PrefabInstance:
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5107908359487144770}
+      objectReference: {fileID: 7505202214265446350}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1575735658702523898}
+      objectReference: {fileID: 5107908359487144770}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -8715,21 +8715,21 @@ PrefabInstance:
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5107908359487144770}
+      objectReference: {fileID: 7505202214265446350}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1575735658702523898}
+      objectReference: {fileID: 5107908359487144770}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetIsGrabbing
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayHapticVibration
+      value: SetIsGrabbing
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -8739,22 +8739,22 @@ PrefabInstance:
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetIsGrabbing
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayHapticVibration
+      value: SetIsGrabbing
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SnapFingers, Assembly-CSharp
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Autohand.Hand, Assembly-CSharp
+      value: SnapFingers, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -8768,23 +8768,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
+      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SnapFingers, Assembly-CSharp
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Autohand.Hand, Assembly-CSharp
+      value: SnapFingers, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -8825,6 +8835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ignoreMaxHandDistance
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222654096874931, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 1103049691967044778, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -9413,6 +9428,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9413d460e98076241a1f46c91201217d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &7505202214265446350 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 165222654096874931, guid: 386242486c5972145be957989b61c7df,
+    type: 3}
+  m_PrefabInstance: {fileID: 7668830299334034045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8831681786151451166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1224213067510249571, guid: 386242486c5972145be957989b61c7df,
@@ -9443,34 +9464,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 732460751138675086}
+      objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1575735659161826260}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 4
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 732460751138675086}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -9480,46 +9481,16 @@ PrefabInstance:
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 732460751138675086}
+      objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1575735659161826260}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetIsGrabbing
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayHapticVibration
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 732460751138675086}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
       propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetIsGrabbing
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayHapticVibration
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SnapFingers, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Autohand.Hand, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -9530,26 +9501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnGrab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SnapFingers, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Autohand.Hand, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
-        type: 3}
-      propertyPath: OnRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 165222652473334800, guid: 386242486c5972145be957989b61c7df,
         type: 3}
@@ -9590,6 +9541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ignoreMaxHandDistance
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165222654096874931, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 1103049691967044778, guid: 386242486c5972145be957989b61c7df,
         type: 3}
