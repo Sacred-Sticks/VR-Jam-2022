@@ -33,7 +33,7 @@ public class DamageDealer : MonoBehaviour
             Vector3 v = rb.velocity;
 
             Debug.Log("Weapon hit enemy");
-            collision.gameObject.SendMessage("TakeDamage", dmg * v.magnitude);
+            collision.gameObject.SendMessageUpwards("TakeDamage", dmg * v.magnitude);
             t = cooldown;
 
             // FX

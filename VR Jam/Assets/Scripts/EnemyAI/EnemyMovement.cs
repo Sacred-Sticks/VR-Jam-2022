@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [Header("Movement Positions")]
     [SerializeField] private Transform[] mainRoute;
     [SerializeField] private Transform[] combatPoints;
+    [SerializeField] Animator anim;
     [Space]
     [Header("Stopping Values")]
     [SerializeField] private float stoppingDistance;
@@ -18,13 +19,41 @@ public class EnemyMovement : MonoBehaviour
     private EnemyVision vision;
     private NavMeshAgent agent;
 
-    private int currentRoutePoint = 0;
+    [SerializeField] private int currentRoutePoint = 0;
     private bool playerSpotted = false;
 
     private void Awake()
     {
         vision = GetComponentInChildren<EnemyVision>();
         agent = GetComponent<NavMeshAgent>();
+        InvokeRepeating("UpdateAnim", 0.5f, 0.5f);
+    }
+
+    private void UpdateAnim()
+    {
+        bool isShooting = anim.GetCurrentAnimatorStateInfo(0).IsName("Shoot");
+        if (isShooting)
+            return;
+
+        if ( agent.remainingDistance > 0 && agent.velocity.magnitude > 0 )
+        {
+            stationary = false;
+            float r = agent.velocity.magnitude / agent.speed;
+            // get ratio of vel to spd and 
+            if (anim)
+            {
+                anim.Play("Blend Tree");
+                anim.SetFloat("locomotion",r);
+            }
+        }
+
+        if (agent.remainingDistance <= stoppingDistance )
+        {
+            //Debug.Log("agent is stopped");
+            stationary = true;
+            if (anim)
+                anim.Play("Idle");
+        }
     }
 
     private IEnumerator Start()
@@ -33,8 +62,9 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForEndOfFrame();
         while (!playerSpotted)
         {
-            if (agent.remainingDistance < stoppingDistance)
+            if (agent.remainingDistance <= stoppingDistance)
             {
+                Debug.Log(gameObject.name + " reached destination ");
                 currentRoutePoint++;
                 if (currentRoutePoint == mainRoute.Length) currentRoutePoint = 0;
                 agent.destination = mainRoute[currentRoutePoint].position;

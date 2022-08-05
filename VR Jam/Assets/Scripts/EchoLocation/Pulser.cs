@@ -13,6 +13,10 @@ public class Pulser : MonoBehaviour
         echoLocation = GetComponentInChildren<EchoLocation>();
     }
 
+    public void SetEchoLocationSourcePos(Vector3 location)
+    {
+        echoLocation.gameObject.transform.position = location;
+    }
     public void Pulse()
     {
         playAudio.AudioPlayer();

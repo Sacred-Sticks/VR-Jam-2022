@@ -8,7 +8,8 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private Transform gunTransform;
     [SerializeField] private float timePerBullet;
     [SerializeField] private int gunRange;
-
+    [SerializeField] Pulser audiopulser;
+    [SerializeField] Animator anim; // optional
     private EnemyVision vision;
 
     private bool playerSpotted;
@@ -48,6 +49,16 @@ public class EnemyShooting : MonoBehaviour
     private void ShootAtPlayer()
     {
         Vector3 directionTowardPlayer = playerTransform.position - gunTransform.position;
+
+        //first send audio pulse to signify the enemy firing
+        audiopulser.SetEchoLocationSourcePos(gunTransform.position);
+        audiopulser.Pulse();
+        if (anim)
+        {
+            anim.StopPlayback();
+            anim.Play("Shoot");
+        }
+
         if (Physics.Raycast(gunTransform.position, directionTowardPlayer, out RaycastHit hit, float.PositiveInfinity))
         {
             if (hit.collider.gameObject.transform == playerTransform)
