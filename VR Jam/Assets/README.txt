@@ -7,7 +7,7 @@ Goals:
 	Create Enemy AI for movement: DONE
 	Create ambient sound sources (water droplets, thunder, machinery): probably not needed due to snapping
 	Find appropriate sounds (Snapping sounds added)
-	Add sliding hands for mace (like blade & sorcery): In progress
+	Add sliding hands for mace (like blade & sorcery): DONE
 	Add pocket storage system for weapons (likely over the shoulders)
 	Setup End Goal
 		Ideas:
