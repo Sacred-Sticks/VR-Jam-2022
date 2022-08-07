@@ -46,6 +46,7 @@ public class LooseGrab : MonoBehaviour
     {
         joint.autoConfigureConnectedAnchor = true;
         joint.yMotion = ConfigurableJointMotion.Locked;
+        joint.angularYMotion = ConfigurableJointMotion.Locked;
     }
 
     private void UnlockGrab(ConfigurableJoint joint)
@@ -54,6 +55,7 @@ public class LooseGrab : MonoBehaviour
         joint.autoConfigureConnectedAnchor = false;
         joint.connectedAnchor = unlockAnchor;
         joint.yMotion = ConfigurableJointMotion.Limited;
+        joint.angularYMotion = ConfigurableJointMotion.Free;
     }
 
     private void AlternateJointStatus()

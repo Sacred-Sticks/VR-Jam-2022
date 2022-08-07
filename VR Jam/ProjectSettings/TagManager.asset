@@ -8,6 +8,7 @@ TagManager:
   - Speaker
   - Enemy Eyes
   - Key
+  - Weapon
   layers:
   - Default
   - TransparentFX
