@@ -6,16 +6,17 @@ public class KeyLock : MonoBehaviour
 {
     [Header("Key Data")]
     [SerializeField] private GameObject key;
-    [SerializeField] private float keyDistance;
+    [SerializeField] private float maxKeyDistance;
     [Space]
     [SerializeField] UnityEvent OnKeyActivation;
 
     private Grabbable grab;
     private Rigidbody keyBody;
 
-    private float initialAngle;
+    private Vector3 initialEntryPoint;
+    private float distanceEntered;
     private bool checkKey;
-    private float currentDistance;
+    private bool triggerEntered;
 
     private void Awake()
     {
@@ -28,8 +29,12 @@ public class KeyLock : MonoBehaviour
     {
         if (!checkKey) return;
 
-        currentDistance = Vector3.Distance(transform.position, key.transform.position);
-        if (currentDistance > keyDistance) return;
+        Debug.Log("Key inserted");
+
+        distanceEntered = Vector3.Distance(initialEntryPoint, key.transform.position);
+        if (distanceEntered < maxKeyDistance) return;
+
+        Debug.Log("Key Accepted");
 
         OnKeyActivation.Invoke();
 
@@ -40,8 +45,7 @@ public class KeyLock : MonoBehaviour
     public void StartKeyCheck()
     {
         checkKey = true;
-        initialAngle = key.transform.rotation.eulerAngles.y;
-        if (initialAngle > 180) initialAngle -= 180;
+        initialEntryPoint = key.transform.position;
     }
 
     public void StopKeyCheck()
