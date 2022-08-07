@@ -6,35 +6,26 @@ public class KeyLock : MonoBehaviour
 {
     [Header("Key Data")]
     [SerializeField] private GameObject key;
-    [SerializeField] private float maxKeyDistance;
+    [SerializeField] private float keyDistance;
     [Space]
     [SerializeField] UnityEvent OnKeyActivation;
-
     private Grabbable grab;
     private Rigidbody keyBody;
 
-    private Vector3 initialEntryPoint;
-    private float distanceEntered;
+    private float initialAngle;
     private bool checkKey;
-    private bool triggerEntered;
+    private float currentDistance;
 
     private void Awake()
     {
-        grab = key.GetComponent<Grabbable>();
-        grab.isGrabbable = true;
-        keyBody = key.GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
         if (!checkKey) return;
 
-        Debug.Log("Key inserted");
-
-        distanceEntered = Vector3.Distance(initialEntryPoint, key.transform.position);
-        if (distanceEntered < maxKeyDistance) return;
-
-        Debug.Log("Key Accepted");
+        currentDistance = Vector3.Distance(transform.position, key.transform.position);
+        if (currentDistance > keyDistance) return;
 
         OnKeyActivation.Invoke();
 
@@ -42,10 +33,21 @@ public class KeyLock : MonoBehaviour
         checkKey = false;
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag.Equals("key"))
+        {
+            key = collision.gameObject;
+        }
+    }
     public void StartKeyCheck()
     {
+        grab = key.GetComponent<Grabbable>();
+        grab.isGrabbable = true;
+        keyBody = key.GetComponent<Rigidbody>();
         checkKey = true;
-        initialEntryPoint = key.transform.position;
+        initialAngle = key.transform.rotation.eulerAngles.y;
+        if (initialAngle > 180) initialAngle -= 180;
     }
 
     public void StopKeyCheck()

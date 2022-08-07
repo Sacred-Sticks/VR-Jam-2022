@@ -56,7 +56,7 @@ public class EnemyHealth : MonoBehaviour
                 r.isKinematic = false;
             }
             anim.StopPlayback();
-            anim.enabled = false;
+
         }
 
         if (ragdoll)

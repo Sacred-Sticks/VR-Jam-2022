@@ -42,8 +42,8 @@ public class EnemyMovement : MonoBehaviour
             // get ratio of vel to spd and 
             if (anim)
             {
-                anim.Play("Blend Tree");
-                anim.SetFloat("locomotion",r);
+                anim.Play("Walk");
+                //anim.SetFloat("locomotion",r);
             }
         }
 
