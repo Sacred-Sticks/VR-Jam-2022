@@ -8,10 +8,6 @@ public class KeyLock : MonoBehaviour
     [SerializeField] private GameObject key;
     [SerializeField] private float keyDistance;
     [Space]
-    [Header("Hand Information")]
-    [SerializeField] private Hand leftHand;
-    [SerializeField] private Hand rightHand;
-    [Space]
     [SerializeField] UnityEvent OnKeyActivation;
 
     private Grabbable grab;
@@ -37,10 +33,7 @@ public class KeyLock : MonoBehaviour
 
         OnKeyActivation.Invoke();
 
-        grab.ForceHandRelease(leftHand);
-        grab.ForceHandRelease(rightHand);
         keyBody.isKinematic = true;
-        grab.isGrabbable = false;
         checkKey = false;
     }
 
