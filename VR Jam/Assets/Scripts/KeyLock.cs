@@ -5,8 +5,10 @@ using UnityEngine.Events;
 public class KeyLock : MonoBehaviour
 {
     [Header("Key Data")]
-    [SerializeField] private GameObject key;
+    private GameObject [] allkeys;
     [SerializeField] private float keyDistance;
+    private GameObject key;
+    
     [Space]
     [SerializeField] UnityEvent OnKeyActivation;
     private Grabbable grab;
@@ -18,11 +20,13 @@ public class KeyLock : MonoBehaviour
 
     private void Awake()
     {
+        allkeys = GameObject.FindGameObjectsWithTag("Key");
     }
 
     private void Update()
     {
         if (!checkKey) return;
+
 
         currentDistance = Vector3.Distance(transform.position, key.transform.position);
         if (currentDistance > keyDistance) return;
@@ -33,15 +37,21 @@ public class KeyLock : MonoBehaviour
         checkKey = false;
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag.Equals("key"))
-        {
-            key = collision.gameObject;
-        }
-    }
     public void StartKeyCheck()
     {
+        float low = Mathf.Infinity;
+        int lidx = -1;
+        for (int i = 0; i < allkeys.Length; i++)
+        {
+            float dist = Vector3.Distance(transform.position, allkeys[i].transform.position);
+            if (dist < low)
+            {
+                low = dist;
+                lidx = i;
+            }
+        }
+        key = allkeys[lidx];
+
         grab = key.GetComponent<Grabbable>();
         grab.isGrabbable = true;
         keyBody = key.GetComponent<Rigidbody>();
