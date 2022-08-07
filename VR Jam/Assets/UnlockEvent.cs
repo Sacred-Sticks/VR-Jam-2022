@@ -7,6 +7,7 @@ public class UnlockEvent : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] GameObject[] objs;
     [SerializeField] Pulser objectivePulser;
+    [SerializeField] private int keysNeeded;
     public void Unlock()
     {
         foreach (GameObject o in objs)
@@ -23,9 +24,12 @@ public class UnlockEvent : MonoBehaviour
             
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddKey()
     {
-        
+        keysNeeded--;
+        if (keysNeeded == 0)
+        {
+            Unlock();
+        }
     }
 }
