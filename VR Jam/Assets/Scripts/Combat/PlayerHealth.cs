@@ -10,4 +10,9 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += healthModification;
     }
+
+    public int GetHealth()
+    {
+        return currentHealth;
+    }
 }
