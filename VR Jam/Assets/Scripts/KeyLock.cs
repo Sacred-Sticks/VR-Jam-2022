@@ -14,7 +14,6 @@ public class KeyLock : MonoBehaviour
     private Grabbable grab;
     private Rigidbody keyBody;
 
-    private float initialAngle;
     private bool checkKey;
     private float currentDistance;
 
@@ -29,7 +28,7 @@ public class KeyLock : MonoBehaviour
 
 
         currentDistance = Vector3.Distance(transform.position, key.transform.position);
-        if (currentDistance > keyDistance) return;
+        if (currentDistance < keyDistance) return;
 
         OnKeyActivation.Invoke();
 
@@ -56,8 +55,6 @@ public class KeyLock : MonoBehaviour
         grab.isGrabbable = true;
         keyBody = key.GetComponent<Rigidbody>();
         checkKey = true;
-        initialAngle = key.transform.rotation.eulerAngles.y;
-        if (initialAngle > 180) initialAngle -= 180;
     }
 
     public void StopKeyCheck()

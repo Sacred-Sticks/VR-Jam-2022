@@ -12,9 +12,6 @@ public class EnemyMovement : MonoBehaviour
     [Space]
     [Header("Stopping Values")]
     [SerializeField] private float stoppingDistance;
-    [Space]
-    [Header("Is it stationary")]
-    [SerializeField] private bool stationary;
 
     private EnemyVision vision;
     private NavMeshAgent agent;
@@ -37,7 +34,6 @@ public class EnemyMovement : MonoBehaviour
 
         if ( agent.remainingDistance > 0 && agent.velocity.magnitude > 0 )
         {
-            stationary = false;
             float r = agent.velocity.magnitude / agent.speed;
             // get ratio of vel to spd and 
             if (anim)
@@ -50,7 +46,6 @@ public class EnemyMovement : MonoBehaviour
         if (agent.remainingDistance <= stoppingDistance )
         {
             //Debug.Log("agent is stopped");
-            stationary = true;
             if (anim)
                 anim.Play("Idle");
         }
