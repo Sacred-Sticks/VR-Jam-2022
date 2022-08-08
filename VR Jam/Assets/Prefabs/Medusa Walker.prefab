@@ -192,7 +192,15 @@ MonoBehaviour:
   mainRoute:
   - {fileID: 0}
   - {fileID: 0}
-  combatPoints: []
+  - {fileID: 0}
+  - {fileID: 0}
+  combatPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   anim: {fileID: 372295825836171189}
   stoppingDistance: 0.1
   currentRoutePoint: 0
@@ -5618,6 +5626,7 @@ MonoBehaviour:
   anim: {fileID: 372295825836171189}
   es: {fileID: 322449715420757277}
   em: {fileID: 322449715420757275}
+  ev: {fileID: 6728002509151476006}
 --- !u!1 &322704713808539453 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1100012372992750, guid: ab5143a39115941939829b7c6505072f,
@@ -6524,3 +6533,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 322449715948063924}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6728002509151476006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6424165981289682322, guid: 37204474737ba274db953c000d6f4bbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 322449715948063924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a973eed77ea24428a70d84a7e5ff43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

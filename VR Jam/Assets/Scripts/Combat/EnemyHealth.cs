@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] EnemyShooting es;
     [SerializeField] EnemyMovement em;
+    [SerializeField] EnemyVision ev;
     void Start()
     {
         
@@ -31,6 +32,8 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log(gameObject.name + " took " + dmg + " dmg");
         hp -= dmg;
+
+        ev.SetPlayerSpotted(true);
 
         if (hp <= 0)
             DeathRoutine();

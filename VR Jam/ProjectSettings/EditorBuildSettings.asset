@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lucas/EchoLocation.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/scn_temple/Temple.unity
+    guid: 66da2bacebc577c4fb0546f2f466dba3
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a6cb317720fb0654dae603824442ed19,
       type: 2}

@@ -27,12 +27,9 @@ public class DamageDealer : MonoBehaviour
             Vector3 point = collision.contacts[0].point;
             Vector3 normal = collision.contacts[0].normal;
             
-            Debug.Log("normal " + normal);
-            Debug.Log("Attacking " + collision.gameObject.name);
             // only hit enemy if cooldown is done then reset cooldown
             Vector3 v = rb.velocity;
 
-            Debug.Log("Weapon hit enemy");
             collision.gameObject.SendMessageUpwards("TakeDamage", dmg * v.magnitude);
             t = cooldown;
 

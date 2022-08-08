@@ -59,7 +59,6 @@ public class EnemyMovement : MonoBehaviour
         {
             if (agent.remainingDistance <= stoppingDistance)
             {
-                Debug.Log(gameObject.name + " reached destination ");
                 currentRoutePoint++;
                 if (currentRoutePoint == mainRoute.Length) currentRoutePoint = 0;
                 agent.destination = mainRoute[currentRoutePoint].position;

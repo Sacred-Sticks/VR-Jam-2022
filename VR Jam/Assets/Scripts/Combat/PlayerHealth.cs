@@ -9,6 +9,11 @@ public class PlayerHealth : MonoBehaviour
     public void ModifyHealth(int healthModification)
     {
         currentHealth += healthModification;
+
+        if (currentHealth == 0)
+        {
+            Application.Quit();
+        }
     }
 
     public int GetHealth()
