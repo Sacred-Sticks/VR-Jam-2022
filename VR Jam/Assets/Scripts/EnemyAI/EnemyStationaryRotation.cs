@@ -8,6 +8,7 @@ public class EnemyStationaryRotation : MonoBehaviour
     [SerializeField] private float timeToRotate;
     [SerializeField] private int degreesToRotate;
     [SerializeField] private int rotationDirection;
+    [SerializeField] private Transform headTransform;
 
     private EnemyVision vision;
 
@@ -46,14 +47,14 @@ public class EnemyStationaryRotation : MonoBehaviour
 
     private void Rotate()
     {
-        transform.Rotate(transform.up, rotationSpeed * Time.deltaTime, Space.Self);
+        headTransform.Rotate(transform.up, rotationSpeed * Time.deltaTime, Space.Self);
         t += Time.deltaTime;
         if (t >= timeToRotate)
         {
             t = -timeToRotate;
             rotationSpeed *= -1;
             rotation = new(transform.rotation.eulerAngles.x, rotationDirection * degreesToRotate + initialYRot, transform.rotation.eulerAngles.z);
-            transform.rotation = Quaternion.Euler(rotation);
+            headTransform.rotation = Quaternion.Euler(rotation);
             rotationDirection *= -1;
         }
     }
