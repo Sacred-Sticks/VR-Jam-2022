@@ -26,13 +26,10 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collided");
         if (collision.gameObject.CompareTag("Player"))
         {
             FindObjectOfType<PlayerHealth>().ModifyHealth(-1);
-            Debug.Log("health lowered");
         }
-        Debug.Log("destroyed");
         Destroy(gameObject);
     }
 }

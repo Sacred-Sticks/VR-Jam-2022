@@ -11,11 +11,8 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private int gunRange;
     [SerializeField] Pulser audiopulser;
     [SerializeField] Animator anim; // optional
-<<<<<<< Updated upstream
     NavMeshAgent nma;
-=======
     [SerializeField] private GameObject projectile;
->>>>>>> Stashed changes
     private EnemyVision vision;
 
     private bool playerSpotted;
