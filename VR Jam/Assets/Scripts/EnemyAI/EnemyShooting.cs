@@ -47,7 +47,7 @@ public class EnemyShooting : MonoBehaviour
     {
         Vector3 lookAtPlayer = new(playerTransform.position.x, transform.position.y, playerTransform.position.z);
         transform.LookAt(lookAtPlayer);
-        gunTransform.LookAt(playerTransform.position);
+        gunTransform.LookAt(playerTransform.position + playerTransform.up);
     }
 
     private void ShootAtPlayer()
