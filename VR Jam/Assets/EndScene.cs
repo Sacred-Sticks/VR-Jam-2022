@@ -6,17 +6,22 @@ public class EndScene : MonoBehaviour
 {
     [SerializeField] private int waitTime;
 
-    private AudioSource audio;
+    private AudioSource audioComponent;
 
     private void Awake()
     {
-        audio = GetComponent<AudioSource>();
+        audioComponent = GetComponent<AudioSource>();
     }
 
-    public IEnumerator FinishScene()
+    private IEnumerator FinishScene()
     {
-        audio.Play();
+        audioComponent.Play();
         yield return new WaitForSeconds(waitTime);
         Application.Quit();
+    }
+
+    public void EndGame()
+    {
+        StartCoroutine(FinishScene());
     }
 }
