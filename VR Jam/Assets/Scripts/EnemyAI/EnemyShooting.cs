@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyShooting : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private int gunRange;
     [SerializeField] Pulser audiopulser;
     [SerializeField] Animator anim; // optional
+    NavMeshAgent nma;
     private EnemyVision vision;
 
     private bool playerSpotted;
@@ -17,6 +19,7 @@ public class EnemyShooting : MonoBehaviour
     private void Awake()
     {
         vision = GetComponentInChildren<EnemyVision>();
+        nma = GetComponent<NavMeshAgent>();
     }
 
     private IEnumerator Start()
