@@ -11,7 +11,11 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private int gunRange;
     [SerializeField] Pulser audiopulser;
     [SerializeField] Animator anim; // optional
+<<<<<<< Updated upstream
     NavMeshAgent nma;
+=======
+    [SerializeField] private GameObject projectile;
+>>>>>>> Stashed changes
     private EnemyVision vision;
 
     private bool playerSpotted;
@@ -62,12 +66,14 @@ public class EnemyShooting : MonoBehaviour
             anim.Play("Shoot");
         }
 
-        if (Physics.Raycast(gunTransform.position, directionTowardPlayer, out RaycastHit hit, float.PositiveInfinity))
-        {
-            if (hit.collider.gameObject.transform == playerTransform)
-            {
-                playerTransform.parent.gameObject.GetComponent<PlayerHealth>().ModifyHealth(-1);
-            }
-        }
+        Instantiate(projectile, gunTransform.position, gunTransform.rotation);
+
+        //if (Physics.Raycast(gunTransform.position, directionTowardPlayer, out RaycastHit hit, float.PositiveInfinity))
+        //{
+        //    if (hit.collider.gameObject.transform == playerTransform)
+        //    {
+        //        playerTransform.parent.gameObject.GetComponent<PlayerHealth>().ModifyHealth(-1);
+        //    }
+        //}
     }
 }
