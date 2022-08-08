@@ -241,9 +241,9 @@ MonoBehaviour:
   singleHandOnly: 1
   allowHeldSwapping: 0
   instantGrab: 0
-  useGentleGrab: 1
+  useGentleGrab: 0
   maintainGrabOffset: 0
-  ignoreWeight: 1
+  ignoreWeight: 0
   parentOnGrab: 0
   throwPower: 1
   jointBreakForce: Infinity

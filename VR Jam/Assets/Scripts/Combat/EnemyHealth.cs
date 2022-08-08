@@ -30,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
     
     public void TakeDamage(float dmg)
     {
-        Debug.Log(gameObject.name + " took " + dmg + " dmg");
         hp -= dmg;
 
         ev.SetPlayerSpotted(true);

@@ -38,6 +38,7 @@ public class DamageDealer : MonoBehaviour
             pulser.gameObject.transform.position = point;
             pulser.Pulse();
 
+            if (hitParticles == null) return;
             ParticleSystem fx = Instantiate(hitParticles, point, Quaternion.LookRotation(normal, Vector3.up));
             fx.Emit(10);
             Destroy(fx, 2f);
