@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public float hp;
     [SerializeField] bool ragdoll;
     Rigidbody[] rb; 
-    Animator anim;
+    [SerializeField] Animator anim;
     [SerializeField] EnemyShooting es;
     [SerializeField] EnemyMovement em;
     void Start()
@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
         
             if (ragdoll)
         {
-            anim = GetComponentInParent<Animator>();
+           
             rb = CollectRagdollColliders();
 
             foreach (Rigidbody r in rb)
@@ -43,11 +43,9 @@ public class EnemyHealth : MonoBehaviour
     }
     private void DeathRoutine()
     {
-        if (em)
-            em.enabled = false;
 
-        if (es)
-            es.enabled = false;
+        Destroy(es);
+        Destroy(em);
 
         if (ragdoll)
         {
@@ -56,7 +54,7 @@ public class EnemyHealth : MonoBehaviour
                 r.isKinematic = false;
             }
             anim.StopPlayback();
-
+            anim.enabled = false;
         }
 
         if (ragdoll)
