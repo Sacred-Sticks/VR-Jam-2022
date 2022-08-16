@@ -27,7 +27,7 @@ public class ShareVision : MonoBehaviour
         FindEnemies();
         for (int i = 0; i < enemies.Count; i++)
         {
-            Debug.Log(transform.parent.name + " shared with " + enemies[i].name);
+            //Debug.Log(transform.parent.name + " shared with " + enemies[i].name);
             enemies[i].GetComponent<EnemyVision>().SetPlayerSpotted(true);
         }
     }

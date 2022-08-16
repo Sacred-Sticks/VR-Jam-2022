@@ -27,7 +27,7 @@ public class UnlockEvent : MonoBehaviour
     public void AddKey()
     {
         keysNeeded -= 1;
-        Debug.Log(gameObject.name + " needs " + keysNeeded);
+        //Debug.Log(gameObject.name + " needs " + keysNeeded);
         if (keysNeeded == 0)
         {
             Unlock();
